@@ -32,7 +32,11 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build project
-        run: ./gradlew clean build
+        run: |
+          ./gradlew clean compileJava \
+            --no-daemon \
+            --no-build-cache \
+            --rerun-tasks
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
