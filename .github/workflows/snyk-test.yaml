@@ -21,6 +21,6 @@ jobs:
           java-version: '21'
       
       - name: Run Snyk Monitor
-        run: snyk test
+        run: snyk code test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
