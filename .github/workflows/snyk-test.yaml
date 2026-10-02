@@ -23,4 +23,4 @@ jobs:
       - name: Run Snyk Monitor
         run: snyk code test
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          SNYK_TOKEN: ${{ secrets.SNYK_PAT }}
