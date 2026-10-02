@@ -5,7 +5,7 @@ on:
 
 jobs:
   snyk-test:
-    runs-on: test-arc-runner-scale-set
+    runs-on: ubuntu-latest
     env:
       AWS_REGION: us-east-1
     steps:
